@@ -64,3 +64,6 @@ C:\Users\bigol\workspace\CashDragon\obj\Debug\net6.0\refint\CashDragon.dll
 C:\Users\bigol\workspace\CashDragon\obj\Debug\net6.0\CashDragon.pdb
 C:\Users\bigol\workspace\CashDragon\obj\Debug\net6.0\CashDragon.genruntimeconfig.cache
 C:\Users\bigol\workspace\CashDragon\obj\Debug\net6.0\ref\CashDragon.dll
+C:\Users\bigol\workspace\CashDragon\bin\Debug\net6.0\client\package-lock.json
+C:\Users\bigol\workspace\CashDragon\bin\Debug\net6.0\client\package.json
+C:\Users\bigol\workspace\CashDragon\bin\Debug\net6.0\client\public\manifest.json
