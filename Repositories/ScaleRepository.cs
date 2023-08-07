@@ -8,9 +8,9 @@ using CashDragon.Utils;
 
 namespace CashDragon.Repositories
 {
-    public class ScaleRepo : BaseRepo, IScaleRepo
+    public class ScaleRepository : BaseRepository, IScaleRepository
     {
-        public ScaleRepo(IConfiguration configuration) : base(configuration) { }
+        public ScaleRepository(IConfiguration configuration) : base(configuration) { }
         public List<Scales> GetScales()
         {
             using (var conn = Connection)
@@ -77,27 +77,27 @@ namespace CashDragon.Repositories
             }
         }
 
-        Scales IScaleRepo.GetScales(int id)
+        Scales IScaleRepository.GetScales(int id)
         {
             throw new NotImplementedException();
         }
 
-        void IScaleRepo.Add(Scales scales)
+        void IScaleRepository.Add(Scales scales)
         {
             throw new NotImplementedException();
         }
 
-        void IScaleRepo.Delete(Scales scales)
+        void IScaleRepository.Delete(Scales scales)
         {
             throw new NotImplementedException();
         }
 
-        void IScaleRepo.Update(Scales scales)
+        void IScaleRepository.Update(Scales scales)
         {
             throw new NotImplementedException();
         }
 
-        void IScaleRepo.Delete(int id)
+        void IScaleRepository.Delete(int id)
         {
             throw new NotImplementedException();
         }

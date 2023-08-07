@@ -2,7 +2,7 @@
 
 namespace CashDragon.Repositories
 {
-    public interface IScaleRepo
+    public interface IScaleRepository
     {
         List<Scales> GetScales();
         Scales GetScales(int id);

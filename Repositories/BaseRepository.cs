@@ -3,11 +3,11 @@ using Microsoft.Extensions.Configuration;
 
 namespace CashDragon.Repositories
 {
-    public abstract class BaseRepo
+    public abstract class BaseRepository
     {
         private readonly string _connectionString;
 
-        public BaseRepo(IConfiguration configuration)
+        public BaseRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("DefaultConnection");
         }

@@ -9,8 +9,8 @@ namespace CashDragon.Controllers
     [ApiController]
     public class ScaleController : ControllerBase
     {
-        private readonly IScaleRepo _scaleRepo;
-        public ScaleController(IScaleRepo scaleRepo)
+        private readonly IScaleRepository _scaleRepo;
+        public ScaleController(IScaleRepository scaleRepo)
         {
             _scaleRepo = scaleRepo;
         }
