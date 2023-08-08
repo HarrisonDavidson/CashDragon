@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
+import ReactDOM from "react-dom"
 import { BrowserRouter as Router } from "react-router-dom";
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+
+const DragonsHoard = ({ decimalNumber }) => {
+  return <div>{decimalNumber}</div>;
+};
+
+export default DragonsHoard;
+
 
 // fake data generator
 const getItems = (count, offset = 0) =>
