@@ -1,15 +1,27 @@
-const apiUrl = "https://localhost:7178";
+import { useState, useEffect } from "react";
 
-export const Ledger = (userObject) => {
-  return fetch(`${apiUrl}/api/userprofile/getbyemail?email=${userObject.email}`)
-  .then((r) => r.json())
-    .then((userProfile) => {
-      if(userProfile.id){
-        localStorage.setItem("userProfile", JSON.stringify(userProfile));
-        return userProfile
-      }
-      else{
-        return undefined
-      }
-    });
-};
+// const apiUrl = "https://localhost:7178";
+const baseUrl = '/api/Ledger';
+
+const GetLedgerById = () => {
+  const [ledger, setLedger] = useState(null);
+
+  useEffect(() => {
+    fetch('/api/Ledger/GetLedgerById')
+    .then(response => response.json())
+    .then(data => {
+      setLedger(data);
+    })})
+
+    return (
+      <div>
+        {ledger !== null ? (
+          <>Dragon's Hoard: {ledger}</>
+        ) : (
+          <></>
+        )}
+      </div>
+    )
+        };
+
+    export default GetLedgerById

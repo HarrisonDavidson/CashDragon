@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import ReactDOM from "react-dom"
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter, BrowserRouter as Router } from "react-router-dom";
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import  {Ledger}  from "../Ledger/Ledger";
 
-const DragonsHoard = ({ decimalNumber }) => {
-  return <div>{decimalNumber}</div>;
-};
-
-export default DragonsHoard;
 
 
 // fake data generator
@@ -91,6 +87,10 @@ function Scale() {
 
   return (
     <div>
+      <>
+      Dragon's Hoard:
+      </>
+      <p></p>
       <button
         type="button"
         onClick={() => {

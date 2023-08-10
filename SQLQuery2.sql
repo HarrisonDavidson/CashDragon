@@ -33,9 +33,9 @@ CREATE TABLE [UserProfile] (
 GO
 
 CREATE TABLE [Ledger] (
-  [ledger_id] int PRIMARY KEY IDENTITY,
-  [userProfileId] int,
-  [checking_amount] decimal
+  [LedgerId] int PRIMARY KEY IDENTITY,
+  [UserProfileId] int,
+  [LedgerAmount] decimal
 )
 GO
 
