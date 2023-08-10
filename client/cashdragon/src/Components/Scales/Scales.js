@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import ReactDOM from "react-dom"
 import { BrowserRouter, BrowserRouter as Router } from "react-router-dom";
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import  {Ledger}  from "../Ledger/Ledger";
 
 
 
@@ -167,5 +166,7 @@ function Scale() {
     </div>
   );
 }
+
+
 
 export {Scale}

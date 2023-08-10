@@ -3,12 +3,13 @@ h2 {
 }
 
 .App {
+    text-emphasis-color: aliceblue;
     text-align: center;
     font-family: 'Arial', sans-serif;
   }
   
   .calculator {
-    width: 250px;
+    width: 150px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f4;

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 
 const MortgageCalculator = () => {
+  const [principal, setPrincipal] = useState(0);
   const [loanAmount, setLoanAmount] = useState('');
   const [interestRate, setInterestRate] = useState('');
   const [loanTerm, setLoanTerm] = useState('');
   const [monthlyPayment, setMonthlyPayment] = useState(0);
+  const [totalCost, setTotalCost] =useState(0)
 
   const calculateMonthlyPayment = () => {
     // Convert interest rate to decimal
@@ -17,7 +19,10 @@ const MortgageCalculator = () => {
       (loanAmount * monthlyInterestRate) /
       (1 - Math.pow(1 + monthlyInterestRate, -totalPayments));
 
+      const totalCost = (monthlyPayment * loanTerm * 12) - principal;
+
     setMonthlyPayment(monthlyPayment.toFixed(2));
+    setTotalCost(totalCost.toFixed(0))
   };
 
   return (
@@ -50,6 +55,7 @@ const MortgageCalculator = () => {
       <button onClick={calculateMonthlyPayment}>Calculate</button>
       <div>
         <h2>Monthly Payment: ${monthlyPayment}</h2>
+        <p>Total Cost of Loan: ${totalCost}</p>
       </div>
     </div>
   );

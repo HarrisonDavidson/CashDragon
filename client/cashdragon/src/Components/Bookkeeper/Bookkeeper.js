@@ -11,6 +11,7 @@ export const Bookkeeper = () => {
     
     
     return (
+        <font color="white">
     <div style={{ backgroundImage: `url(${OldRedWizard})` }}>
         <h2>Welcome to the Bookkeeper!</h2>
      <p></p>
@@ -20,5 +21,6 @@ export const Bookkeeper = () => {
      <p></p>
      <StandardCalculator />
     </div>
+    </font>
     );
 }

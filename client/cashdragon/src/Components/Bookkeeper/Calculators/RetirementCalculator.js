@@ -6,20 +6,21 @@ const RetirementCalculator = () => {
   const [currentSavings, setCurrentSavings] = useState('');
   const [annualContribution, setAnnualContribution] = useState('');
   const [interestRate, setInterestRate] = useState('');
-  const [retirementSavings, setRetirementSavings] = useState(0);
+  const [retirementSavings, setRetirementSavings] = useState();
 
   const calculateRetirementSavings = () => {
     const yearsToRetirement = retirementAge - currentAge;
     const annualInterestRate = interestRate / 100;
-    let futureSavings = currentSavings;
-
+    let futureSavings = parseFloat(currentSavings); // Convert to a number
+  
     for (let year = 0; year < yearsToRetirement; year++) {
-      futureSavings += annualContribution;
+      futureSavings += parseFloat(annualContribution); // Convert to a number
       futureSavings *= 1 + annualInterestRate;
     }
-
-    setRetirementSavings(futureSavings.toFixed(2));
+  
+    setRetirementSavings(futureSavings.toFixed(0));
   };
+
 
   return (
     <div>
