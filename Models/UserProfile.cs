@@ -40,5 +40,9 @@ namespace CashDragon.Models
                 return $"{FirstName} {LastName}";
             }
         }
+
+        public int LedgerId { get; internal set; }
+        public int UserProfileId { get; internal set; }
+        public decimal LedgerAmount { get; internal set; }
     }
 }

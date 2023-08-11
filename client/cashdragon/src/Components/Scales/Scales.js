@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from "react-dom"
 import { BrowserRouter, BrowserRouter as Router } from "react-router-dom";
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import CashDragonLogo2 from '../CashDragonLogo.png'
 
 
 
@@ -85,9 +86,8 @@ function Scale() {
   }
 
   return (
-    <div>
+    <div style={{ backgroundImage: `url(${CashDragonLogo2})` }}>
       <>
-      Dragon's Hoard:
       </>
       <p></p>
       <button
@@ -149,7 +149,7 @@ function Scale() {
                                 );
                               }}
                             >
-                              delete
+                              Paid
                             </button>
                           </div>
                         </div>

@@ -1,15 +1,7 @@
-const apiUrl = "https://localhost:7178";
+export const getLedger = () => {
+  return fetch("/api/Ledger").then((res) => res.json())
+}
 
-export const ledger = (userObject) => {
-  return fetch(`${apiUrl}/api/ledger/getbyledgerid?ledgerid=${ledger.ledgerid}`)
-  .then((r) => r.json())
-    .then((ledger) => {
-      if(ledger.ledgerid){
-        localStorage.setItem("ledger", JSON.stringify(ledger));
-        return userProfile
-      }
-      else{
-        return undefined
-      }
-    });
-};
+export const getLedgerById = (id) => {
+  return fetch(`/api/Ledger/GetByLedgerId?ledgerId=${id}`).then((res) => res.json())
+}

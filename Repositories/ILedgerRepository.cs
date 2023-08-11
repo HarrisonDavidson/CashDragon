@@ -1,4 +1,6 @@
 ﻿using CashDragon.Models;
+using Microsoft.Data.SqlClient;
+using System.Collections.Generic;
 
 namespace CashDragon.Repositories
 {

@@ -9,7 +9,17 @@ namespace CashDragon.Repositories
     {
         public LedgerRepository(IConfiguration configuration) : base(configuration) { }
 
-        public Ledger GetByLedgerId(int ledgerId)
+        private Ledger NewLedgerFromReader(SqlDataReader reader)
+        {
+            return new Ledger()
+            {
+                LedgerId = DbUtils.GetInt(reader, "LedgerId"),
+                UserProfileId = DbUtils.GetInt(reader, "UserProfileId"),
+                LedgerAmount = DbUtils.GetDecimal(reader, "LedgerAmount")
+            };
+        }
+
+        public List<Ledger> GetAllLedgers()
         {
             using (var conn = Connection)
             {
@@ -17,8 +27,35 @@ namespace CashDragon.Repositories
                 using (var cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = @"
-                        SELECT up.LedgerId, up.UserProfileId, up.LedgerAmount
-                        FROM Ledger up";
+                        SELECT LedgerId, UserProfileId, LedgerAmount
+                        FROM Ledger";
+
+                    var reader = cmd.ExecuteReader();
+
+                    var ledger = new List<Ledger>();
+                    while (reader.Read())
+                    {
+                        ledger.Add(NewLedgerFromReader(reader));
+                    }
+                    reader.Close();
+
+                    return ledger;
+
+                }
+            }
+        }
+
+                    public Ledger GetByLedgerId(int ledgerId)
+        {
+            using (var conn = Connection)
+            {
+                conn.Open();
+                using (var cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = @"
+                        SELECT LedgerId, UserProfileId, LedgerAmount
+                        FROM Ledger
+                        WHERE LedgerId = 1";
 
                     DbUtils.AddParameter(cmd, "@ledgerId", ledgerId);
 
