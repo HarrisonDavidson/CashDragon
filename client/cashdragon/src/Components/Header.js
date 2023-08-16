@@ -18,22 +18,18 @@ export default function Header({ isLoggedIn, setIsLoggedIn }) {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand tag={RRNavLink} to="/">Cash Dragon</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             { /* When isLoggedIn === true, we will render the Home link */}
             {isLoggedIn &&
               <>
               <NavItem>
                 <NavLink tag={RRNavLink} to="/">Dragon Scales</NavLink>
-
               </NavItem>
 
               <NavItem>
                 <NavLink tag={RRNavLink} to="/Bookkeeper">Bookkeeper</NavLink>
-
               </NavItem>
+
               </>
             }
           </Nav>
@@ -57,10 +53,11 @@ export default function Header({ isLoggedIn, setIsLoggedIn }) {
                 <NavItem>
                   <NavLink tag={RRNavLink} to="/register">Register</NavLink>
                 </NavItem>
+
+                
               </>
             }
           </Nav>
-        </Collapse>
       </Navbar>
     </div>
   );

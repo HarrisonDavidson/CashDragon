@@ -4,6 +4,8 @@ import Header from "./Components/Header";
 import ApplicationViews from "./Components/ApplicationViews";
 import { useEffect } from 'react';
 import Authorize from "./Components/Authorize"
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -17,14 +19,17 @@ function App() {
     }, [isLoggedIn])
 
     return (
+        <DndProvider backend={HTML5Backend}>
         <Router>
             <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             {isLoggedIn ?
+                
                 <ApplicationViews />
                 :
                 <Authorize setIsLoggedIn={setIsLoggedIn} />
             }
         </Router>
+        </DndProvider>
     );
 }
 
