@@ -18,7 +18,7 @@ insert into [Goals] ([goal_id], [userProfileId], [goal_name], [goal_amount], [al
 set identity_insert [Goals] off
 
 set identity_insert [Ledger] on
-insert into [Ledger] ([LedgerId], [UserProfileId], [LedgerAmount]) values (1, 1, 300.00);
+insert into [Ledger] ([Id], [UserProfileId], [LedgerAmount]) values (1, 1, 300.00);
 set identity_insert [Ledger] off
 
 set identity_insert [Hoard] on

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect , useState } from 'react';
 import ReactDOM from "react-dom"
 import { BrowserRouter, BrowserRouter as Router } from "react-router-dom";
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import CashDragonLogo2 from '../CashDragonLogo.png'
 
-
+export const Home = () => {
 
 // fake data generator
 const getItems = (count, offset = 0) =>
@@ -57,7 +57,6 @@ const getListStyle = isDraggingOver => ({
   width: 250
 });
 
-function Scale() {
   const [state, setState] = useState([getItems(10), getItems(5, 10)]);
 
   function onDragEnd(result) {
@@ -165,8 +164,4 @@ function Scale() {
       </div>
     </div>
   );
-}
-
-
-
-export {Scale}
+                          }

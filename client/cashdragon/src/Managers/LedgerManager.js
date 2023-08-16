@@ -1,7 +1,9 @@
+const apiUrl = "https://localhost:7178";
+
 export const getLedger = () => {
-  return fetch("/api/Ledger").then((res) => res.json())
+  return fetch(`${apiUrl}/api/ledger`).then((res) => res.json())
 }
 
-export const getLedgerById = (id) => {
-  return fetch(`/api/Ledger/GetByLedgerId?ledgerId=${id}`).then((res) => res.json())
+export const getById = (id) => {
+  return fetch(`${apiUrl}/api/ledger/getbyid?id=${id}`).then((res) => res.json())
 }

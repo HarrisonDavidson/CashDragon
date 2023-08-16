@@ -13,6 +13,7 @@ DROP TABLE IF EXISTS [SCALES];
 DROP TABLE IF EXISTS [HOARD];
 DROP TABLE IF EXISTS [GOALS];
 DROP TABLE IF EXISTS [UserType];
+GO
 
 CREATE TABLE [UserType] (
   [Id] integer PRIMARY KEY IDENTITY,
@@ -29,15 +30,15 @@ CREATE TABLE [UserProfile] (
   [CreateDateTime] datetime NOT NULL,
   [ImageLocation] nvarchar(255),
   [UserTypeId] int NOT NULL,
+
 )
-GO
 
 CREATE TABLE [Ledger] (
-  [LedgerId] int PRIMARY KEY IDENTITY,
+  [Id] int PRIMARY KEY IDENTITY,
   [UserProfileId] int,
   [LedgerAmount] decimal
+
 )
-GO
 
 CREATE TABLE [Scales] (
   [scale_id] int PRIMARY KEY IDENTITY,
@@ -46,14 +47,12 @@ CREATE TABLE [Scales] (
   [allocated_amount] decimal,
   [goal_amount] decimal,
 )
-GO
 
 CREATE TABLE [Hoard] (
   [savings_id] int PRIMARY KEY IDENTITY,
   [userProfileId] int,
   [savings_amount] decimal
 )
-GO
 
 CREATE TABLE [Goals] (
   [goal_id] int PRIMARY KEY IDENTITY,
@@ -62,4 +61,3 @@ CREATE TABLE [Goals] (
   [goal_amount] decimal,
   [allocated_amount] decimal
 )
-GO

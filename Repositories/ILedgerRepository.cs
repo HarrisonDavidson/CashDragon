@@ -6,6 +6,7 @@ namespace CashDragon.Repositories
 {
     public interface ILedgerRepository
     {
-        Ledger GetByLedgerId(int ledgerId);
+        List<Ledger> GetAll();
+        Ledger GetById(int id);
     }
 }

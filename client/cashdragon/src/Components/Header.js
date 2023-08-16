@@ -34,11 +34,6 @@ export default function Header({ isLoggedIn, setIsLoggedIn }) {
                 <NavLink tag={RRNavLink} to="/Bookkeeper">Bookkeeper</NavLink>
 
               </NavItem>
-
-              <NavItem>
-                <NavLink tag={RRNavLink} to="/Ledger">Ledger</NavLink>
-
-              </NavItem>
               </>
             }
           </Nav>

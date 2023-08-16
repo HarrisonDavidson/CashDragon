@@ -1,5 +1,4 @@
 import React from "react";
-import OldRedWizard from "./OldRedWizard.jpg"
 import "./Bookkeeper.css"
 import MortgageCalculator from "./Calculators/MortgageCalculator";
 import RetirementCalculator from "./Calculators/RetirementCalculator";
@@ -12,16 +11,16 @@ export const Bookkeeper = () => {
     
     
     return (
+        <div class="container-fluid">
         <font color="white">
     <div style={{ backgroundImage: `url(${CashDragonLogo2})` }}>
-        <h2>Welcome to the Bookkeeper!</h2>
+        <h2>Welcome to Cash Dragon!</h2>
      <p></p>
      <MortgageCalculator />
-     <p></p>
      <RetirementCalculator />
-     <p></p>
      <StandardCalculator />
     </div>
     </font>
+    </div>
     );
 }
