@@ -4,6 +4,7 @@ import MortgageCalculator from "./Calculators/MortgageCalculator";
 import RetirementCalculator from "./Calculators/RetirementCalculator";
 import StandardCalculator from "./Calculators/StandardCalculator";
 import CashDragonLogo2 from "./CashDragonLogo2.png"
+import Hoard from "./DragonsHoard"
 
 export const Bookkeeper = () => {
     
@@ -19,6 +20,7 @@ export const Bookkeeper = () => {
      <MortgageCalculator />
      <RetirementCalculator />
      <StandardCalculator />
+     <Hoard />
     </div>
     </font>
     </div>

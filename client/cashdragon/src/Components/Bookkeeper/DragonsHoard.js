@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-function Ledger() {
-    const [balance, setBalance] = useState(1000);
+
+function Hoard() {
+    const [balance2, setBalance2] = useState(1500);
     const [transactionAmount, setTransactionAmount] = useState(0);
   
     useEffect(() => {
@@ -9,15 +10,15 @@ function Ledger() {
         .then(response => response.json())
         .then(data => {
             console.log('Fetched data:', data);
-            setBalance(data.balance);
+            setBalance2(data.balance2);
         })
         .catch(error => console.error('Error fetching data:', error));
     }, []);
   
     const handleTransaction = (type) => {
       if (transactionAmount !== 0) {
-        const newBalance = type === 'deposit' ? balance + transactionAmount : balance - transactionAmount;
-        setBalance(newBalance);
+        const newBalance2 = type === 'deposit' ? balance2 + transactionAmount : balance2 - transactionAmount;
+        setBalance2(newBalance2);
         setTransactionAmount(0);
   
         fetch('/updateBalance', {
@@ -25,16 +26,15 @@ function Ledger() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ balance: newBalance }),
+          body: JSON.stringify({ balance2: newBalance2 }),
         });
       }
     };
   
     return (
-        <div class="container-fluid">
-      <div className="Ledger">
-        <h1>Ledger</h1>
-        <p>Current Balance: ${balance}</p>
+      <div className="hoard">
+        <h1>Dragon's Hoard</h1>
+        <p>Current Balance: ${balance2}</p>
         <input
           type="number"
           value={transactionAmount}
@@ -43,9 +43,8 @@ function Ledger() {
         <button onClick={() => handleTransaction('deposit')}>Deposit</button>
         <button onClick={() => handleTransaction('withdraw')}>Withdraw</button>
       </div>
-      </div>
     );
   }
   
-  export default Ledger;
+  export default Hoard;
   

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../Bookkeeper.css'
 
 const MortgageCalculator = () => {
   const [principal, setPrincipal] = useState(0);
@@ -26,7 +27,7 @@ const MortgageCalculator = () => {
   };
 
   return (
-    <div>
+    <div className='mortgagecalc'>
       <h1>Mortgage Calculator</h1>
       <div>
         <label>Loan Amount ($)</label>

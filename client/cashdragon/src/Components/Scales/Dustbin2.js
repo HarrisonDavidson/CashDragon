@@ -43,12 +43,14 @@ export const Dustbin2 = ({ greedy, children }) => {
     backgroundColor = 'darkgreen'
   }
   return (
+    
     <div ref={drop} style={getStyle(backgroundColor)}>
       {text}
       <br />
       {hasDropped && <span>Paid! {hasDroppedOnChild && ' on child'}</span>}
 
       <div>{children}</div>
+      
     </div>
   )
 }

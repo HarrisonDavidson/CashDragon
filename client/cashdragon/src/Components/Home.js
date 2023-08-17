@@ -51,6 +51,7 @@ const PictureList = [
 function Home() {
   const [board, setBoard] = useState([]);
   const [dustbin2, setDustbin2] = useState([]);
+  
 
   const [{ isOver }, drop] = useDrop(() => ({
     accept: "image",
@@ -66,21 +67,19 @@ function Home() {
   };
 
   return (
-    <>
+    <div class="container-fluid">
+        
+        <Ledger />
       <div className="Pictures">
         {PictureList.map((picture) => {
           return <Picture url={picture.url} id={picture.id} />;
         })}
       </div>
-
-
+      
       <Dustbin2 />
       <Dustbin3 />
       <Dustbin4 />
-
-      <Ledger />
-
-    </>
+    </div>
   );
 }
 
