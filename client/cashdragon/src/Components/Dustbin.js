@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import { useDrop } from 'react-dnd'
 import { ItemTypes } from './ItemTypes.js'
+import { PictureList } from './PictureListExport.js'
+
+
+
 function getStyle(backgroundColor) {
   return {
     border: '1px solid rgba(0,0,0,0.2)',
@@ -42,6 +46,8 @@ export const Dustbin = ({ greedy, children }) => {
   if (isOverCurrent || (isOver && greedy)) {
     backgroundColor = 'darkgreen'
   }
+
+
   return (
     <div ref={drop} style={getStyle(backgroundColor)}>
       {text}

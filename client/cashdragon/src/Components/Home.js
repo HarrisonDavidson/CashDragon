@@ -15,6 +15,7 @@ import { useDrop } from "react-dnd";
 import { Dustbin2 } from './Scales/Dustbin2';
 import { Dustbin3 } from './Scales/Dustbin3';
 import { Dustbin4 } from './Scales/Dustinbin4';
+import  Ledger  from './Ledger'
 
 const PictureList = [
   {
@@ -33,7 +34,7 @@ const PictureList = [
     value: 20
   },
   {
-    // id: 4,
+    id: 4,
     url: "https://media.istockphoto.com/id/184297007/photo/fifty-dollar-bill.jpg?s=2048x2048&w=is&k=20&c=UwKklO27J_juxuXvQuWwdQLBFPXEJPBxRHA8OiTMvQc=",
     value: 50
   },
@@ -49,18 +50,19 @@ const PictureList = [
 
 function Home() {
   const [board, setBoard] = useState([]);
+  const [dustbin2, setDustbin2] = useState([]);
 
   const [{ isOver }, drop] = useDrop(() => ({
     accept: "image",
-    drop: (item) => addImageToBoard(item.id),
+    drop: (item) => addImageToDustbin2(item.id),
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
   }));
 
-  const addImageToBoard = (id) => {
+  const addImageToDustbin2 = (id) => {
     const pictureList = PictureList.filter((picture) => id === picture.id);
-    setBoard((board) => [...board, pictureList[0]]);
+    setDustbin2((dustbin2) => [...dustbin2, pictureList[0]]);
   };
 
   return (
@@ -76,6 +78,7 @@ function Home() {
       <Dustbin3 />
       <Dustbin4 />
 
+      <Ledger />
 
     </>
   );

@@ -67,3 +67,4 @@ C:\Users\bigol\workspace\CashDragon\obj\Debug\net6.0\ref\CashDragon.dll
 C:\Users\bigol\workspace\CashDragon\bin\Debug\net6.0\client\cashdragon\package-lock.json
 C:\Users\bigol\workspace\CashDragon\bin\Debug\net6.0\client\cashdragon\package.json
 C:\Users\bigol\workspace\CashDragon\bin\Debug\net6.0\client\cashdragon\public\manifest.json
+C:\Users\bigol\workspace\CashDragon\bin\Debug\net6.0\client\cashdragon\database.json

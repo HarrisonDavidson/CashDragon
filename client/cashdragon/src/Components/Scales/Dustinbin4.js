@@ -37,7 +37,7 @@ export const Dustbin4 = ({ greedy, children }) => {
     }),
     [greedy, setHasDropped, setHasDroppedOnChild],
   )
-  const text = greedy ? 'greedy' : 'Housing'
+  const text = greedy ? 'greedy' : 'Housing - $100'
   let backgroundColor = 'rgba(0, 0, 0, .5)'
   if (isOverCurrent || (isOver && greedy)) {
     backgroundColor = 'darkgreen'
@@ -46,7 +46,7 @@ export const Dustbin4 = ({ greedy, children }) => {
     <div ref={drop} style={getStyle(backgroundColor)}>
       {text}
       <br />
-      {hasDropped && <span>dropped {hasDroppedOnChild && ' on child'}</span>}
+      {hasDropped && <span>Paid! {hasDroppedOnChild && ' on child'}</span>}
 
       <div>{children}</div>
     </div>
