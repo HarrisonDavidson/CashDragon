@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Home } from "./Home";
+import Home from "./Home";
 import { Bookkeeper } from "./Bookkeeper/Bookkeeper";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
