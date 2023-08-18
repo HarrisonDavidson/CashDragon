@@ -12,14 +12,14 @@ export const Bookkeeper = () => {
     
     
     return (
-        <div class="container-fluid">
+        <div className="books" class="container-fluid">
         <font color="white">
     
     <div>
 
      <p></p>
      <Hoard />
-     <MortgageCalculator />
+     <MortgageCalculator className="mortgage-calc"/>
      <RetirementCalculator />
      <StandardCalculator />
     </div>

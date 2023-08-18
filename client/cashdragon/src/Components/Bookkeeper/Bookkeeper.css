@@ -1,6 +1,12 @@
 body {
   color:rgb(0, 0, 0);
   background-color: rgb(8, 109, 4);
+  align-items: center;
+  size: 1000px;
+}
+
+.mortgage-calc {
+  size: 20px ;
 }
 
 h2 {
