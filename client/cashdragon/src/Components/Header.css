@@ -1,0 +1,15 @@
+.mr-auto {
+    padding: 0px;
+    font-style:oblique;
+}
+
+.nav-link {
+    padding: 60px;
+    font-style:italic;
+}
+
+.navigation-bar {
+    align-content: flex-end;
+    background-color: rgb(37, 37, 37);
+    height: 30px;
+}

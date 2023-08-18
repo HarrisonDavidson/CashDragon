@@ -67,7 +67,7 @@ function Home() {
   };
 
   return (
-    <div class="container-fluid">
+    <div className="home" class="container-fluid">
         
         <Ledger />
       <div className="Pictures">
@@ -75,7 +75,7 @@ function Home() {
           return <Picture url={picture.url} id={picture.id} />;
         })}
       </div>
-      
+
       <Dustbin2 />
       <Dustbin3 />
       <Dustbin4 />

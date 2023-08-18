@@ -26,7 +26,7 @@ export default function Login({setIsLoggedIn}) {
 
   return (
     <><>
-          <img src={CashDragonLogo} alt="dragonLogo" height={900} />
+          <img src={CashDragonLogo} alt="dragonLogo" height={200} width={200} />
       </>
       
       <Form onSubmit={loginSubmit}>

@@ -2,6 +2,7 @@
   text-align: center;
   width: 100vw;
   height: 100vh;
+  background-color: aqua;
 }
 
 .App-header {
@@ -16,7 +17,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #95dcf0;
 }
 
 .Pictures {
@@ -31,4 +32,8 @@ img {
   width: 300px;
   height: 200px;
   border: 2px solid black;
+}
+
+.home {
+  background-color: aqua;
 }

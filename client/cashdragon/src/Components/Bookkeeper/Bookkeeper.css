@@ -1,5 +1,6 @@
 body {
-  color:rgb(0, 0, 0)
+  color:rgb(0, 0, 0);
+  background-color: rgb(8, 109, 4);
 }
 
 h2 {
@@ -26,7 +27,7 @@ color:rgb(0, 0, 0)
   
   .calculator {
     color:black;
-    width: 160px;
+    width: 170px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f4;

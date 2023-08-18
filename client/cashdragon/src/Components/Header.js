@@ -11,12 +11,14 @@ import {
   NavLink
 } from 'reactstrap';
 
+import "./Header.css"
+
 export default function Header({ isLoggedIn, setIsLoggedIn }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <Nav className='navigation-bar'>
       <Navbar color="light" light expand="md">
           <Nav className="mr-auto" navbar>
             { /* When isLoggedIn === true, we will render the Home link */}
@@ -59,6 +61,6 @@ export default function Header({ isLoggedIn, setIsLoggedIn }) {
             }
           </Nav>
       </Navbar>
-    </div>
+      </Nav>
   );
 }

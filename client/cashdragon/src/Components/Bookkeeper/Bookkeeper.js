@@ -14,13 +14,14 @@ export const Bookkeeper = () => {
     return (
         <div class="container-fluid">
         <font color="white">
-    <div style={{ backgroundImage: `url(${CashDragonLogo2})` }}>
-        <h2>Welcome to Cash Dragon!</h2>
+    
+    <div>
+
      <p></p>
+     <Hoard />
      <MortgageCalculator />
      <RetirementCalculator />
      <StandardCalculator />
-     <Hoard />
     </div>
     </font>
     </div>

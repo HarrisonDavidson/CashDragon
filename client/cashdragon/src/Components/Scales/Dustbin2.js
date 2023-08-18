@@ -5,7 +5,7 @@ function getStyle(backgroundColor) {
   return {
     border: '1px solid rgba(0,0,0,0.2)',
     minHeight: '8rem',
-    minWidth: '8rem',
+    minWidth: '17rem',
     color: 'white',
     backgroundColor,
     padding: '2rem',
